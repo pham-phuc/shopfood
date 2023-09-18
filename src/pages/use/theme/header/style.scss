@@ -1,0 +1,72 @@
+@use "sass:map";
+@import "../../../../styles/pages/theme";
+.header-top {
+  background: #f3f3f3;
+}
+.header-top-right {
+  //   background-color: aqua;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px 0 13px;
+
+  ul {
+    display: flex;
+    list-style: none;
+    column-gap: 10px;
+    li {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      color: map-get($theme-colors, "normal-color");
+    }
+    a {
+      font-size: 16px;
+      display: inline-block;
+      color: map-get($theme-colors, "normal-text");
+    }
+    li:last-child {
+      cursor: pointer;
+      margin-left: 10px;
+      span {
+        font-size: 14px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.header-top-left {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 13px;
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 30px;
+    li {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      color: map-get($theme-colors, "normal-color");
+      span {
+        font-size: 14px;
+        margin-left: 5px;
+      }
+    }
+    li:first-child {
+      position: relative;
+      &::after {
+        position: absolute;
+        height: 20px;
+        right: -15px;
+        top: 1px;
+        width: 1px;
+        background: #000000;
+        opacity: 0.1;
+        content: "";
+      }
+    }
+  }
+}
