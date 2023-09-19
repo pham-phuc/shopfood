@@ -6,7 +6,7 @@
 .header-top-right {
   //   background-color: aqua;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   padding: 10px 0 13px;
 
@@ -66,6 +66,70 @@
         background: #000000;
         opacity: 0.1;
         content: "";
+      }
+    }
+  }
+}
+.header-logo {
+  padding: 15px 0;
+}
+.header-menu{
+  padding: 24px 0;
+  ul{
+    display: flex;
+    justify-content: space-between;
+
+    li{
+      list-style: none;
+      a{
+        text-decoration: none;
+        color: map-get($theme-colors, "bold-text" );
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: all 0.3s ;
+        padding: 5px 0;
+        display: block;
+      }
+    }
+
+    .active a {
+      color:map-get($theme-colors, "main")
+    }
+  }
+}
+.header-cart {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 24px 0;
+
+  ul {
+    display: flex;
+    margin-right: 25px;
+    li {
+      list-style: none;
+      position: relative;
+      margin-left: 20px;
+      svg {
+        font-size: 20px;
+        color: map-get($theme-colors, "main");
+      }
+      span {
+        color: #fff;
+        background: map-get($theme-colors, "main");
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 10px;
+        font-weight: 500;
+        left: 20px;
+        top: -5px;
       }
     }
   }
